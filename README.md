@@ -1,54 +1,51 @@
-## Projeto de Clinica para Programação p/ Internet 2
+Proyecto de Clínica para Programación para Internet 2
+En qué consiste este proyecto:
 
-No que consite este projeto:
-- Administrar medicos e especialidade e agendas
-- Criar uma agenda para disponibilizar as consultas
-- Permitir o usuario escolher um consulta em dia e horario de acordo com agenda do medico.
+Administrar médicos y especialidades y agendas
+Crear una agenda para disponibilizar las consultas
+Permitir al usuario elegir una consulta en día y horario de acuerdo con la agenda del médico.
+Configurando el ambiente para ejecutar la aplicación web.
+Descargue este repositorio:
 
-## Configurando o ambiente para executar a aplicação web.
-Faça o download deste repositorio:
-
-```
+shell
+Copiar código
 $ git clone git@github.com:Dan-Source/projeto_clinica.git
-```
+Cree una máquina virtual e instale las bibliotecas disponibles en el archivo requirements.txt:
 
-Crie um maquina virtual e instale a bibliotecas disponiveis no 
-arquivo requirementes.txt:
+Entre en la carpeta creada e inicie un ambiente virtual:
 
-Entre na pasta criada e inicie um ambiente virtual:
-```
+shell
+Copiar código
 $ cd projeto_clinica
 $ python3 -m venv venv
-```
-Depois voce deve ativa-lo com o seguinte comando:
+Después debe activarlo con el siguiente comando:
 
-```
+shell
+Copiar código
 $ source ./venv/bin/activate
-```
-Apos ativado, instale as bibliotecas necessárias para executar o projeto:
-```
+Una vez activado, instale las bibliotecas necesarias para ejecutar el proyecto:
+
+ruby
+Copiar código
  (venv)$ pip install -r requirements.txt
-```
-Para poder ter o primeiro acesso e pode configurar o aplicação vamos executar o comando 
-'migrate' para gerar o banco de dados padrão do Django(SQLite). E depois criar o superusuario:
-```
+Para poder tener el primer acceso y configurar la aplicación, vamos a ejecutar el comando 'migrate' para generar la base de datos por defecto de Django (SQLite). Y después crear el superusuario:
+
+shell
+Copiar código
 (venv)$ ./manage.py migrate
 (venv)$ ./manage.py createsuperuser
-Apelido/Usuário: admin
-E-mail: admin@mail.com
-Password: 
-Password (again):
-```
+Apodo/Usuario: admin
+Correo electrónico: admin@mail.com
+Contraseña: 
+Contraseña (de nuevo):
+Para iniciar el servidor después de este paso, debe:
 
-Para iniciar o servidor depois deste passo você deve:
-```
+shell
+Copiar código
 (venv)$ ./manage.py runserver
-```
+Para visualizar si todo está ejecutándose como se espera, vamos a acceder a la siguiente dirección:
+http://localhost:8000/
 
-
-Para visualizar se tudo esta executando como esperado vamos acessar o seguinte endereço:
-[http://localhost:8000/](http://localhost:8000/)
-
-Ou você pode ter acesso a admin do Django:
-[http://localhost:8000/admin](http://localhost:8000/admin)
+O puede tener acceso al administrador de Django:
+http://localhost:8000/admin
 
